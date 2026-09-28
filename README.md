@@ -1,62 +1,80 @@
-# Google Ads + Shopify Conversion Tracking
+# Shopify + Google Ads Conversion Tracking
 
-> Upwork portfolio demo / sanitized technical case study.
+> **Reliable ecommerce conversion tracking with GA4, GTM, Google Ads and Shopify order reconciliation.**
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-Sanitized%20Demo-2ea44f)](https://github.com/beltebaiken-star/shopify-google-ads-conversion-tracking)
+[![Run](https://img.shields.io/badge/Quick%20Check-npm%20test-blue)](https://github.com/beltebaiken-star/shopify-google-ads-conversion-tracking)
+[![Upwork](https://img.shields.io/badge/Available%20on-Upwork-14a800)](https://www.upwork.com/freelancers/baikenbelte)
 
 ## Client problem
 
-An ecommerce measurement blueprint for reliable purchase, add-to-cart and checkout tracking with transaction value, currency and deduplication checks.
+Store owners often see missing purchases, duplicate conversions, wrong revenue, or Google Ads numbers that do not reconcile with Shopify.
 
-## What this repository demonstrates
+## What this project proves
 
-- Add-to-cart / checkout / purchase events
-- Transaction ID/value/currency validation
-- Google Ads conversion mapping
-- Duplicate/missing-event diagnostics
-- QA checklist across Ads, GA4 and storefront orders
-
-## Tech stack
-
-Google Ads, GA4, GTM, Shopify, dataLayer
+This portfolio project demonstrates a clean purchase event contract, transaction ID/value/currency validation, and a zero-dependency test that checks the payload before tags consume it.
 
 ## Architecture
 
-This repository is intentionally structured as a public portfolio implementation rather than a copy of private client code. Production credentials, customer data, private URLs and proprietary business logic are excluded.
-
-```text
-Input / Store / Platform Event
-        ↓
-Validation & Normalization
-        ↓
-Business / Tracking / Integration Logic
-        ↓
-External API or Storefront
-        ↓
-QA, Logs, Reconciliation
+```mermaid
+flowchart LR
+  A[Shopify storefront] --> B[dataLayer ecommerce event]
+  B --> C[Google Tag Manager]
+  C --> D[GA4 ecommerce]
+  C --> E[Google Ads conversion]
+  D --> F[DebugView / reports]
+  E --> G[Ads diagnostics]
+  F --> H[Reconcile with Shopify orders]
+  G --> H
 ```
 
-## What an Upwork client can verify here
+## Quick start
 
-- Clear separation between configuration, business logic and external API calls
-- Error handling and production-readiness thinking
-- Practical ecommerce use cases rather than toy examples
-- Documentation that explains both implementation and validation
-- Security-conscious handling of credentials and customer data
+```bash
+git clone https://github.com/beltebaiken-star/shopify-google-ads-conversion-tracking.git
+cd shopify-google-ads-conversion-tracking
+npm test
+```
 
-## Suggested demo contents
+**What the demo checks:** Validates a synthetic purchase event for transaction ID, numeric value, currency and item data.
 
-- `src/` — sanitized implementation examples
-- `examples/` — sample payloads using synthetic data
-- `tests/` — validation / QA examples
-- `docs/architecture.md` — architecture and flow
-- `docs/qa-checklist.md` — production verification steps
-- `screenshots/` — portfolio diagrams and UI/results images
+No external credentials or paid services are required for this demo.
 
-## Source portfolio reference
+## What I would deliver on a client project
 
-Internal source project: **20 - Google Ads + Shopify Conversion Tracking**
+- Tracking architecture audit
+- GTM / dataLayer implementation plan
+- Purchase and funnel event validation
+- Google Ads conversion mapping
+- GA4 DebugView verification
+- Duplicate/missing conversion diagnosis
+- Shopify order-to-platform reconciliation checklist
 
-Only reusable patterns and sanitized demo material should be published publicly.
+## Production QA principles
 
-## Hiring fit
+- Diagnose the failing layer before changing production code.
+- Keep identifiers, values and platform mappings consistent end-to-end.
+- Test both success and failure paths.
+- Check for duplicates, missing events/data, and stale configuration.
+- Reconcile platform output against Shopify/store source-of-truth data.
+- Document the fix and leave a repeatable verification checklist.
 
-Good match for Upwork projects involving **Google Ads + Shopify Conversion Tracking**, Shopify troubleshooting, ecommerce integrations, tracking reliability, API automation, or production-readiness reviews.
+## Repository map
+
+```text
+demo/                 runnable synthetic validation
+examples/             safe sample payloads / implementation snippets
+docs/architecture.md  technical architecture notes
+docs/qa-checklist.md  production verification checklist
+README.md              client-facing case study
+```
+
+## Security & portfolio note
+
+This repository is a **sanitized technical portfolio demo**. It intentionally excludes customer data, production credentials, private URLs, access tokens and proprietary client code.
+
+## Hire / contact
+
+I take on focused Shopify, ecommerce tracking, analytics, GMC and integration projects.
+
+**Upwork:** https://www.upwork.com/freelancers/baikenbelte
