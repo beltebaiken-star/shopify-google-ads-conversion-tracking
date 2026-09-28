@@ -3,7 +3,7 @@
 > **Reliable ecommerce conversion tracking with GA4, GTM, Google Ads and Shopify order reconciliation.**
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Sanitized%20Demo-2ea44f)](https://github.com/beltebaiken-star/shopify-google-ads-conversion-tracking)
-[![Run](https://img.shields.io/badge/Quick%20Check-npm%20test-blue)](https://github.com/beltebaiken-star/shopify-google-ads-conversion-tracking)
+[![Demo Check](https://github.com/beltebaiken-star/shopify-google-ads-conversion-tracking/actions/workflows/demo-check.yml/badge.svg)](https://github.com/beltebaiken-star/shopify-google-ads-conversion-tracking/actions/workflows/demo-check.yml)
 [![Upwork](https://img.shields.io/badge/Available%20on-Upwork-14a800)](https://www.upwork.com/freelancers/baikenbelte)
 
 ## Client problem
