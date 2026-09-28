@@ -14,6 +14,12 @@ Store owners often see missing purchases, duplicate conversions, wrong revenue, 
 
 This portfolio project demonstrates a clean purchase event contract, transaction ID/value/currency validation, and a zero-dependency test that checks the payload before tags consume it.
 
+## Visual proof
+
+The visual below summarizes the **client problem, architecture, validation logic, and delivery outcomes** for this sanitized technical case study.
+
+![Shopify + Google Ads Conversion Tracking visual proof](./screenshots/visual-proof-overview.png)
+
 ## Architecture
 
 ```mermaid
