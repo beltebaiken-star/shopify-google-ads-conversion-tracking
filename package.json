@@ -1,0 +1,8 @@
+{
+  "name": "shopify-google-ads-conversion-tracking-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node demo/validate-purchase.mjs"
+  }
+}
